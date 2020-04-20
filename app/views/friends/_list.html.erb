@@ -18,6 +18,10 @@
                     <td><%= friend.first_name %></td>
                     <td><%= friend.last_name %></td>
                     <td>
+                        <%= link_to 'View Profile',
+                            user_path(friend), 
+                            class: 'btn btn-sm btn-primary'
+                        %>
                         <%= link_to 'Unfriend',
                             friendship_path(friend), 
                             method: :delete, 
